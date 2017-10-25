@@ -16,20 +16,28 @@
 
 body {
     text-align: center;
+    margin: auto;
+    width: 600px;
+}
+
+#logo {
+    height: 72px;
+    vertical-align: bottom;
+    margin-right: 10px;
 }
 
 h1 {
     font-family: roboto-thin;
-    font-size: 50px;
-    letter-spacing: .05em;
+    letter-spacing: .03em;
     margin: 50px 0 0;
     font-size: 60px;
+    display: inline-block;
 }
 
 h3 {
     margin: 0;
     opacity: .7;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 h1, h3 {
@@ -38,8 +46,6 @@ h1, h3 {
 
 #search {
     position: relative;
-    width: 600px;
-    margin: auto;
     margin: 40px auto;
 }
 
@@ -55,39 +61,50 @@ h1, h3 {
     right: 0;
     color: rgb(40,40,40);
     border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+#search button.disabled {
+    opacity: .4;
+    cursor: initial;
 }
 
 #searchResult {
     padding: 0;
+    max-height: 579px;
+    overflow: auto;
 }
 
-#searchResult li {
-    list-style: none;
-    padding: 5px;
-    border-bottom: 1px solid rgb(200,200,200);
+#searchResult div {
+    width: 180px;
+    display: inline-block;
+    margin-bottom: 30px;
+    vertical-align: top;
 }
-/*
-html {
-    background: white;
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    width: 600px;
-    margin: auto;
-    padding: 10px;
-    border-style: solid;
-    background: rgba(200,200,200,0.1);
-    border-width: 0 1px 0 1px;
-    border-color: rgb(240,240,240);
+#searchResult div:nth-child(3n+2) {
+    margin: 0 30px;
+    margin: 0 21px;
 }
 
 a {
-    color: black;
     text-decoration: none;
+    text-align: left;
 }
-*/
+
+#searchResult img {
+    width: 180px;
+}
+
+#searchResult p {
+    color: black;
+    padding-left: 3px;
+    margin: 0 0 3px;
+}
+
+p.user {
+    font-size: 12px;
+    opacity: .7;
+}
+
 #fwraMenu {
     position: absolute;
     top: 15px;
@@ -98,6 +115,103 @@ a {
 }
 #fwraMenu:hover {
     opacity: .6;
+}
+
+#shader, #download {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+#shader { 
+    height: 100%;
+    width: 100%;
+    background: rgba(50,50,50,0.9); 
+}
+
+#download { 
+    background: rgb(250,250,250);
+    height: 200px;
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid rgb(50,50,50);
+}
+
+#download p:first-of-type {
+    margin: 0;
+}
+
+#download #how {
+    font-style: italic;
+    color: rgb(66, 134, 244);
+    cursor: help;
+}
+
+#download button {
+    border: 1px solid #ccc;
+    font-family: roboto-thin;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: rgb(240,240,240);
+    cursor: pointer;
+}
+
+#download button:hover {
+    background: rgb(220,220,220);
+}
+
+.close_container {  
+    height: 30px;
+    width: 30px;
+    padding-left: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor:pointer;
+}
+.close_container:hover div {
+    background: grey;
+}
+.close_container div {
+    height: 30px;
+    width: 1px;
+    background: black;
+}
+.close_container .close_dash1 {   
+    transform: rotate(45deg);
+}
+.close_container .close_dash2 {   
+    transform: rotate(90deg);
+}
+
+
+/*Counter*/
+#counter {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+}
+
+#counter > p {
+    font-family: roboto-thin;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#counter div p {
+    font-size: 30px;
+    font-family: roboto-thin;
+    padding: 10px;
+    margin: 0 8px;
+    border: 1px solid #ccc;
+    background: rgb(245,245,245);
+    display: inline-block;
 }
 
 /*
@@ -155,59 +269,6 @@ a {
     padding: 5px;
     background: rgb(240,240,240);    
 }
-
-/
-h1 {
-    font-weight: 300;
-    border-bottom: 1px solid rgb(220,220,220);
-    margin-bottom: 0;
-    font-size: 1.8em;
-}
-
-h1:first-child {
-    margin: 0;
-}
-/
-h1 {
-    font-size: 30px;
-    margin: 0;
-    font-weight: 300;
-}
-
-h3 {
-    margin-top: 0;
-    opacity: .7;
-    font-weight: 300;
-    font-size: 15px;
-}
-
-#search {
-    position: relative;
-}
-
-#search button {
-    height: 40px;
-    width: 40px;
-    vertical-align: top;
-    border: 0;
-    background: rgba(200,200,200,0.1);
-    padding: 0 8px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: rgb(40,40,40);
-    border-left: 1px solid #ccc;
-}
-
-#searchResult {
-    padding: 0;
-}
-
-#searchResult li {
-    list-style: none;
-    padding: 5px;
-    border-bottom: 1px solid rgb(200,200,200);
-}
 */
 :focus { outline: none }
 
@@ -217,16 +278,7 @@ h3 {
     text-align: initial;
     width: 100%;
 } 
-/* necessary to give position: relative to parent. */
-/*
-input[type="text"] {
-    font: 15px/24px "Lato", Arial, sans-serif;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
-*/
+
 .input-effect input {
     height: 40px;
     width: 100%;
@@ -249,6 +301,7 @@ input[type="text"] {
     height: 2px;
     background-color: #3399FF;
     background-color: rgb(50,50,50);
+    background-color: rgb(150,150,150);
     transition: 0.3s;
     transition: 0.6s;
 }
@@ -270,6 +323,7 @@ input[type="text"] {
     height: 0;
     background-color: #3399FF;
     background-color: rgb(50,50,50);
+    background-color: rgb(150,150,150);
     transition: 0.4s;
     transition: 0.8s;
 }

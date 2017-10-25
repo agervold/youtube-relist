@@ -24,9 +24,9 @@ app
 // Hvis det er et brugernavn, søger man på brugernavnet på YT API og får channelId
 
 app.get('/', function(req, res) {    
-    videoSchema.find(function(err, videos) {
-        res.render('index2', {videos: videos.length});
-    });
+    //videoSchema.find(function(err, videos) {
+        res.render('index', {videos: videos.length});
+    //});
 });
 
 
