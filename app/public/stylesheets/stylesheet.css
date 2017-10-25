@@ -1,0 +1,324 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-thin;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: roboto;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: roboto-thin;
+    font-size: 50px;
+    letter-spacing: .05em;
+    margin: 50px 0 0;
+    font-size: 60px;
+}
+
+h3 {
+    margin: 0;
+    opacity: .7;
+    font-size: 15px;
+}
+
+h1, h3 {
+    font-weight: 100;
+}
+
+#search {
+    position: relative;
+    width: 600px;
+    margin: auto;
+    margin: 40px auto;
+}
+
+#search button {
+    height: 40px;
+    width: 40px;
+    vertical-align: top;
+    border: 0;
+    background: rgba(200,200,200,0.1);
+    padding: 0 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(40,40,40);
+    border-left: 1px solid #ccc;
+}
+
+#searchResult {
+    padding: 0;
+}
+
+#searchResult li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+/*
+html {
+    background: white;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    border-style: solid;
+    background: rgba(200,200,200,0.1);
+    border-width: 0 1px 0 1px;
+    border-color: rgb(240,240,240);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+*/
+#fwraMenu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+#fwraMenu:hover {
+    opacity: .6;
+}
+
+/*
+#fwraApps {
+    width: 192px;
+    border: 1px solid rgba(0,0,0,.2);
+    background: rgb(250,250,250);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#fwraApps ul {
+    padding: 5px;
+    margin: 0;
+}
+
+#fwraApps li {
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#fwraApps li a {
+    text-decoration: none;
+    color: rgb(240,240,240);
+    display: block;
+}
+
+#pf { background: rgb(6, 224, 42); }
+#ue { background: rgb(144, 9, 206); }
+#pc { background: rgb(0, 153, 255); }
+#yr { background: rgb(252,26,26); }
+#ir { background: rgb(255, 230, 0); }
+
+.appSelected {
+    opacity: .6;
+}
+
+#fwraApps li:hover {
+    opacity: .6;
+}
+
+#fwraApps p {
+    margin: 0;
+    text-align: center;
+    color: rgb(150,150,150);
+    border-top: 1px solid rgba(40,40,40,.2);
+    font-size: 14px;
+    padding: 5px;
+    background: rgb(240,240,240);    
+}
+
+/
+h1 {
+    font-weight: 300;
+    border-bottom: 1px solid rgb(220,220,220);
+    margin-bottom: 0;
+    font-size: 1.8em;
+}
+
+h1:first-child {
+    margin: 0;
+}
+/
+h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 0;
+    opacity: .7;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#search {
+    position: relative;
+}
+
+#search button {
+    height: 40px;
+    width: 40px;
+    vertical-align: top;
+    border: 0;
+    background: rgba(200,200,200,0.1);
+    padding: 0 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(40,40,40);
+    border-left: 1px solid #ccc;
+}
+
+#searchResult {
+    padding: 0;
+}
+
+#searchResult li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+*/
+:focus { outline: none }
+
+.input-effect { 
+    position: relative;
+    display: inline-block;
+    text-align: initial;
+    width: 100%;
+} 
+/* necessary to give position: relative to parent. */
+/*
+input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+*/
+.input-effect input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    transition: 0.4s;
+    transition: 0.8s;
+
+    background: transparent;
+    background: rgba(200,200,200,0.1);
+}
+
+.focus-border:before,
+.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3399FF;
+    background-color: rgb(50,50,50);
+    transition: 0.3s;
+    transition: 0.6s;
+}
+
+.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.focus-border i:before,
+.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: #3399FF;
+    background-color: rgb(50,50,50);
+    transition: 0.4s;
+    transition: 0.8s;
+}
+
+.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+:focus ~ .focus-border:before,
+:focus ~ .focus-border:after,
+.has-content ~ .focus-border:before,
+.has-content ~ .focus-border:after {
+    width: 100%;
+    transition: 0.3s;
+    transition: 0.6s;
+}
+
+:focus ~ .focus-border i:before,
+:focus ~ .focus-border i:after,
+.has-content ~ .focus-border i:before,
+.has-content ~ .focus-border i:after {
+    height: 100%;
+    transition: 0.4s;
+    transition: 0.8s;
+}
+
+label {
+    position: absolute;
+    left: 14px;
+    width: 100%;
+    top: 10px;
+    color: #aaa;
+    color: #757575;
+    transition: 0.3s;
+    transition: 0.6s;
+
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+:focus ~ label, .has-content ~ label {
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    color: #3399FF;
+    color: rgb(50,50,50);
+    transition: 0.3s;
+    transition: 0.6s;
+}
