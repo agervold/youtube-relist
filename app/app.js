@@ -1,7 +1,6 @@
 var // Dependencies
 express = require('express'),
 bodyParser = require('body-parser'),
-cookieParser = require('cookie-parser'),
 mongoose = require('mongoose'),
 request = require('request'),
 videoSchema = require('./models/videoSchema');
@@ -10,13 +9,12 @@ const apiKey = "AIzaSyBRc0PKkpL42tUMmRbjTdfe9t7VwMTKDN8";
 
 var app = express();
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-
 app
+.set('views', __dirname + '/views')
+.set('view engine', 'jade')
+
 .use(express.static(__dirname + '/public'))
-.use(bodyParser.urlencoded({ extended: false }))
-//.use(cookieParser());
+.use(bodyParser.urlencoded({ extended: false }));
 
 // Gemmer Altid channelId fra videoer
 // /user/x/videos X er for det meste et brugernavn, men kan også være et channelId
@@ -96,7 +94,6 @@ app.post('/', function(req, res) {
 
 });
 
-// mongoose
 mongoose.connect('mongodb://localhost/youtuberelist');
 
 console.log('Listening on 8888');

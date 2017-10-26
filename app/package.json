@@ -1,16 +1,13 @@
 {
   "author": "Frederik Agervold",
-  "name": "playlistconverter",
-  "description": "Converts playlists between different music streaming services.",
+  "name": "youtube-relist",
+  "description": "Lists youtube videos that are unlisted.",
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "cookie-parser": "1.3.2",
     "express": "~4.0.0",
     "jade": "^1.11.0",
     "mongoose": "^4.11.6",
-    "nodemon": "^1.11.0",
-    "querystring": "~0.2.0",
     "request": "~2.34.0"
   },
   "main": "app.js",
