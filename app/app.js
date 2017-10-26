@@ -22,11 +22,15 @@ app
 // /user/x/videos X er for det meste et brugernavn, men kan også være et channelId
 // Når man går ind på en kanal, hvis det er channelId, så kører man bare derfra
 // Hvis det er et brugernavn, søger man på brugernavnet på YT API og får channelId
-
+/*
 app.get('/', function(req, res) {    
-    //videoSchema.find(function(err, videos) {
+    videoSchema.find(function(err, videos) {
         res.render('index', {videos: videos.length});
-    //});
+    });
+});
+*/
+app.get('/', function(req, res) {    
+    res.render('index');
 });
 
 
