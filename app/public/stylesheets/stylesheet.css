@@ -1,11 +1,11 @@
 @font-face {
     font-family: roboto;
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url(/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
     font-family: roboto-thin;
-    src: url(../fonts/Roboto-Thin.ttf);
+    src: url(/fonts/Roboto-Thin.ttf);
 }
 
 * {
