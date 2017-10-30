@@ -13,11 +13,22 @@
     "default_popup": "popup.html",
 		"default_title": "Youtube Relist"
   },
+  "permissions": [
+    "http://localhost:8888/x"
+  ],
+  "web_accessible_resources": ["icon.png"],
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/watch?*"],
       "js": ["jquery-3.2.1.min.js", "videoScript.js"]
     },
+    /*
+    {
+      "matches": ["https://www.youtube.com/user/*"],
+      "js": ["jquery-3.2.1.min.js", "script.js"],
+      "css": ["stylesheet.css"]
+    },
+    */
     {
       "matches": ["http://yr.fwra.me/"],
       "js": ["checker.js"],

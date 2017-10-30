@@ -64,6 +64,13 @@ app.get('/vids', function(req, res) {
 });
 
 
+app.get('/x', function(req, res) {
+    videoSchema.find(function(err, videos) {
+        res.end(JSON.stringify(videos));
+    });
+});
+
+
 app.get('/counter', function(req, res) {
     videoSchema.find(function(err, videos) {
         res.end(videos.length+"");
